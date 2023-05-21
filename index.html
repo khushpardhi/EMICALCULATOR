@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div style="display: flex;">
+    <div>
+      <h2>
+
+      </h2>
+    </div>
+    <div class="loan-calculator">
+      <div class="top">
+        <h2>EMI Calculator</h2>
+
+        <form action="#">
+          <div class="group">
+            <div class="title">Amount</div>
+            <input type="range" min="0" max="100000" value="0" class="slider1" id="myRange1">
+            <input type="text" value="30000" id="textInput1" class="loan-amount" />
+          </div>
+
+          <div class="group">
+            <div class="title">Interest Rate</div>
+            <input type="range" min="0" max="100" value="0" class="slider1" id="myRange2">
+            <input type="text" value="8.5" id="textInput2" class="interest-rate" />
+          </div>
+
+          <div class="group">
+            <div class="title">Tenure (in months)</div>
+            <input type="range" min="0" max="240" value="0" class="slider1" id="myRange3">
+            <input type="text" value="240" id="textInput3" class="loan-tenure" />
+          </div>
+        </form>
+      </div>
+
+      <div class="result">
+        <div class="left">
+          <div class="loan-emi">
+            <h3>Loan EMI</h3>
+            <div class="value">123</div>
+          </div>
+
+          <div class="total-interest">
+            <h3>Total Interest Payable</h3>
+            <div class="value">1234</div>
+          </div>
+
+          <div class="total-amount">
+            <h3>Total Amount</h3>
+            <div class="value">12345</div>
+          </div>
+
+          <button class="calculate-btn">Calculate</button>
+        </div>
+
+        <div class="right">
+          <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
+
+    <script src="main.js"></script>
+<!-- .jend/nḍbcjhasvcsabsahbhsajhs -->
+    <div style="border: 1px solid black; height: 750px; width: 400px; margin: 35px; padding: 20px; border-radius: 10px; background-color: rgb(255, 255, 255); ">
+      <div style="border: 2px solid gray; margin-bottom: 20px; padding: 10px; border-radius: 10px; text-align: center ; background-color: antiquewhite;">
+        <h2>
+          Featured Calculators & Articles
+        </h2>
+      </div>
+<div>
+  <span style="font-size: 20px;">Home Loan EMI Calculator with Prepayments, Taxes & Insurance</span>
+</div>
+<hr>
+<div>
+  <span style="font-size: 20px;">Loan Calculator — Calculate EMI, Affordability, Tenure & Interest Rate</span>
+</div>
+<hr>
+<div>
+  <span style="font-size: 20px;">Use a Credit Card or Separate Bank Account for Budgeting</span>
+</div>
+<hr>
+<div>
+  <span style="font-size: 20px;">Dhani OneFreedom Card: Disguising Interest as Subscription Fee</span>
+</div>
+<hr>
+<div>
+  <span style="font-size: 20px;">3 Benefits for Women Home Buyers in India</span>
+</div>
+<hr>
+    </div>  
+      <div>
+      
+        <script>
+          var rangeInput1 = document.getElementById("myRange1");
+          var textInput1 = document.getElementById("textInput1");
+
+          rangeInput1.addEventListener("input", function () {
+            textInput1.value = rangeInput1.value;
+          });
+
+          textInput1.addEventListener("input", function () {
+            var value = parseInt(textInput1.value);
+            if (!isNaN(value)) {
+              rangeInput1.value = Math.max(Math.min(value, 100000), 0);
+            }
+          });
+        </script>
+      </div>
+      <div>
+        
+        <script>
+          var rangeInput2 = document.getElementById("myRange2");
+          var textInput2 = document.getElementById("textInput2");
+
+          rangeInput2.addEventListener("input", function () {
+            textInput2.value = rangeInput2.value;
+          });
+
+          textInput2.addEventListener("input", function () {
+            var value = parseInt(textInput2.value);
+            if (!isNaN(value)) {
+              rangeInput2.value = Math.max(Math.min(value, 100), 0);
+            }
+          });
+        </script>
+      </div>
+      <div>
+        <script>
+          var rangeInput3 = document.getElementById("myRange3");
+          var textInput3 = document.getElementById("textInput3");
+
+          rangeInput3.addEventListener("input", function () {
+            textInput3.value = rangeInput3.value;
+          });
+
+          textInput3.addEventListener("input", function () {
+            var value = parseInt(textInput3.value);
+            if (!isNaN(value)) {
+              rangeInput3.value = Math.max(Math.min(value, 100), 0);
+            }
+          });
+        </script>
+      </div>
+  </div>
+</body>
+
+</html>
